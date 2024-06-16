@@ -10,8 +10,8 @@
         body {
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Align items at the top */
-            min-height: 100vh; 
+            align-items: flex-start;
+            min-height: 100vh;
             background-color: #000;
             color: #fff;
             font-family: 'Montserrat', sans-serif;
@@ -28,16 +28,16 @@
             padding: 20px;
             text-align: center;
         }
-      .left img {
-    width: 300px; /* Increase the width of the image */
-    height: 300px; /* Set a fixed height to maintain aspect ratio */
-    border-radius: 70%;
-}
-       .left h1 {
-    margin: 20px 0 10px;
-    font-size: 2em; /* Larger font size */
-    font-family: 'Montserrat', sans-serif; /* Example of a different font */
-}
+        .left img {
+            width: 300px;
+            height: 300px;
+            border-radius: 70%;
+        }
+        .left h1 {
+            margin: 20px 0 10px;
+            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+        }
         .left .social-icons a {
             margin: 0 15px;
             color: #fff;
@@ -51,67 +51,69 @@
         .section {
             margin-bottom: 20px;
         }
-      .section h2 {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 5px;
-    font-size: 1.5em; /* Larger font size for section headings */
-}
-
-.section p {
-    font-size: 1em; /* Larger font size for paragraphs */
-    line-height: 1.6; /* Adjust line height for better readability */
-    font-family: 'Montserrat', sans-serif; /* Example of a different font */
-}
-       .typing {
-        white-space: nowrap;
-        overflow: hidden;
-        font-size: 1.8em;
-        font-family: 'Courier New', Courier, monospace; /* Change font family to a coding font */
-        background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
-        font-weight: normal; /* Ensure font weight is normal */
-    }
-
-          .work-experience {
+        .section h2 {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 5px;
+            font-size: 1.5em;
+        }
+        .section p {
+            font-size: 1em;
+            line-height: 1.6;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 1.8em;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
+            font-weight: normal;
+        }
+        .work-experience {
             margin-bottom: 20px;
-         
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .work-item {
             display: flex;
             margin-bottom: 15px;
             padding: 15px;
             border-radius: 8px;
-            border: 1px solid #ddd; /* Light gray border */
+            background: linear-gradient(90deg, rgba(0,124,240,0.2), rgba(0,223,216,0.2), rgba(121,40,202,0.2), rgba(255,0,128,0.2));
         }
         .work-item:last-child {
-            margin-bottom: 0; /* Remove bottom margin for the last work item */
+            margin-bottom: 0;
         }
-      .work-left {
+        .work-left {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            margin-right: 20px;
         }
         .work-left img {
-            width: 40px;
-            height: 40px;
-            margin-right: 15px;
-            border-radius: 8px; /* Rounded corners for logo */
-        }
-       
-        .work-right {
-            flex: 2;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
         .company-title {
             font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
         }
         .duration {
             font-style: italic;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .description {
+            text-align: justify;
         }
     </style>
 </head>
@@ -133,53 +135,56 @@
                 <p>Hey there! I'm Revati, a graduate student at USC specializing in Data Science. Currently at Ford Motor Company, I am working on a Sales Forecasting project, analyzing sales across North America dealerships. Previously, I worked at Deloitte Consulting, and Capgemini, where I've honed my skills across the data science lifecycle. At USC, I wear another hat as a Software Developer, crafting innovative web apps and integrations for the Facilities department. My curiosity extends beyond the classroom – I'm a GenAI enthusiast, exploring the fascinating realm of LLMs through research. Beyond numbers and code, I find joy in staying organized, reading, playing the violin, and dancing. Both as an engineer and in my creative pursuits, I find immense joy in connecting with people. Feel free to reach out – let's chat!</p>
             </div>
             <div class="section">
-               <h2>Work Experience</h2>
+                <h2>Work Experience</h2>
                 <div class="work-experience">
                     <div class="work-item">
                         <div class="work-left">
-                             <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
+                            <img src="/assets/ford_logo.png" alt="Ford Logo">
                             <p class="company-title">Ford Motor Company</p>
-                            <p class="duration">Data Science Intern |    Jun 2023 - Present<</p>
-                            
+                            <p class="duration">Data Science Intern | Jun 2023 - Present</p>
                         </div>
                         <div class="work-right">
                             <p>Currently working on a Sales Forecasting project, analyzing sales across North America dealerships.</p>
                         </div>
                     </div>
-                     <div class="work-item">
+                    <div class="work-item">
                         <div class="work-left">
+                            <img src="/assets/usc_logo.png" alt="USC Logo">
                             <p class="company-title">University of Southern California</p>
                             <p class="duration">Software Engineer Intern | May 2023 - May 2024</p>
                         </div>
                         <div class="work-right">
-                            <p>Currently working on a Sales Forecasting project, analyzing sales across North America dealerships.</p>
-                        </div>
-                    </div>
-                     <div class="work-item">
-                        <div class="work-left">
-                            <p class="company-title">Information Sciences Institute</p>
-                            <p class="duration">Deep Learning Intern |   May 2023 - May 2024</p>
-                        </div>
-                        <div class="work-right">
-                            <p>Currently working on a Sales Forecasting project, analyzing sales across North America dealerships.</p>
+                            <p>Developed a full stack application incorporating REST APIs, Flask, Python, SQL, and React to streamline maintenance order requests for USC Facilities, resulting in a 40% increase in efficiency.</p>
                         </div>
                     </div>
                     <div class="work-item">
                         <div class="work-left">
+                            <img src="/assets/isi_logo.png" alt="ISI Logo">
+                            <p class="company-title">Information Sciences Institute</p>
+                            <p class="duration">Deep Learning Intern | May 2023 - May 2024</p>
+                        </div>
+                        <div class="work-right">
+                            <p>Implemented network pruning techniques for Large Language Models within a distributed system architecture, resulting in a reduction of model size by 40% and improving inference speed by 50%.</p>
+                        </div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-left">
+                            <img src="/assets/deloitte_logo.png" alt="Deloitte Logo">
                             <p class="company-title">Deloitte Consulting</p>
                             <p class="duration">Business Technology Analyst | Sep 2021 - Nov 2022</p>
                         </div>
                         <div class="work-right">
-                            <p>Worked on various data analysis projects, providing insights and recommendations for business improvements.</p>
+                            <p>Developed end-to-end software integrations using REST APIs, Apache Spark, and ETL techniques, resulting in a 40% increase in data flow efficiency for client's workforce management systems.</p>
                         </div>
                     </div>
                     <div class="work-item">
                         <div class="work-left">
+                            <img src="/assets/capgemini_logo.png" alt="Capgemini Logo">
                             <p class="company-title">Capgemini</p>
                             <p class="duration">Machine Learning Intern | Mar 2020 - Jun 2020</p>
                         </div>
                         <div class="work-right">
-                            <p>Developed and maintained data pipelines and data infrastructure to support data-driven decision making.</p>
+                            <p>Utilized advanced machine learning algorithms to analyze electronic health records, medical imaging scans, and wearable sensor data for knee osteoarthritis, identifying key features which improved diagnostic accuracy by 15%.</p>
                         </div>
                     </div>
                 </div>
