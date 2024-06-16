@@ -30,9 +30,11 @@
             width: 150px;
             border-radius: 50%;
         }
-        .left h1 {
-            margin: 20px 0 10px;
-        }
+       .left h1 {
+    margin: 20px 0 10px;
+    font-size: 2em; /* Larger font size */
+    font-family: 'Helvetica', sans-serif; /* Example of a different font */
+}
         .left .social-icons a {
             margin: 0 10px;
             color: #fff;
@@ -46,11 +48,18 @@
         .section {
             margin-bottom: 20px;
         }
-        .section h2 {
-            margin-bottom: 10px;
-            border-bottom: 1px solid #fff;
-            padding-bottom: 5px;
-        }
+      .section h2 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    font-size: 1.5em; /* Larger font size for section headings */
+}
+
+.section p {
+    font-size: 1.2em; /* Larger font size for paragraphs */
+    line-height: 1.6; /* Adjust line height for better readability */
+    font-family: 'Roboto', sans-serif; /* Example of a different font */
+}
        .typing {
             white-space: nowrap;
             overflow: hidden;
@@ -93,7 +102,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const texts = ["Data Scientist", "Machine Learning Enthusiast", "AI Researcher"];
+            const texts = ["Data Scientist", "Software Developer", "GenAI Enthusiast"];
             let count = 0;
             let index = 0;
             let currentText = '';
