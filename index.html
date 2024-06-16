@@ -80,13 +80,23 @@
             flex-direction: column;
             margin-bottom: 20px;
         }
-        .work-item {
+     .work-item {
             display: flex;
             margin-bottom: 15px;
+            background: linear-gradient(90deg, rgba(0,124,240,0.2), rgba(0,223,216,0.2), rgba(121,40,202,0.2), rgba(255,0,128,0.2));
+            padding: 15px;
+            border-radius: 8px;
         }
-        .work-left {
+       .work-left {
             flex: 1;
-            padding-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+         .work-left img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            border-radius: 50%;
         }
         .work-right {
             flex: 2;
@@ -193,7 +203,7 @@
                     index = 0;
                     setTimeout(type, 1500); // Wait for 2 seconds before typing the next text
                 } else {
-                    setTimeout(type, 250); // Typing speed
+                    setTimeout(type, 100); // Typing speed
                 }
             }());
         });
