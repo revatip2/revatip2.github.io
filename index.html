@@ -49,16 +49,23 @@
             border-bottom: 1px solid #fff;
             padding-bottom: 5px;
         }
+        .typing {
+            border-right: .15em solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left">
-            <img src="/assets/profile_icon.jpg" alt="Your Name">
+            <img src="your-photo.jpg" alt="Your Name">
             <h1>Your Name</h1>
+            <div class="typing" id="typing-text"></div>
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/revatipawar29" target="_blank">LinkedIn</a>
-                <a href="https://github.com/revatip2" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
             </div>
         </div>
         <div class="right">
@@ -76,5 +83,31 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const texts = ["Data Scientist", "Back-end Developer", "GenAI Enthusiast"];
+            let count = 0;
+            let index = 0;
+            let currentText = '';
+            let letter = '';
+            (function type() {
+                if (count === texts.length) {
+                    count = 0;
+                }
+                currentText = texts[count];
+                letter = currentText.slice(0, ++index);
+
+                document.getElementById('typing-text').textContent = letter;
+                if (letter.length === currentText.length) {
+                    count++;
+                    index = 0;
+                    setTimeout(type, 2000); // Wait for 2 seconds before typing the next text
+                } else {
+                    setTimeout(type, 100); // Typing speed
+                }
+            }());
+        });
+    </script>
 </body>
 </html>
