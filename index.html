@@ -56,7 +56,7 @@
 }
 
 .section p {
-    font-size: 1.2em; /* Larger font size for paragraphs */
+    font-size: 1em; /* Larger font size for paragraphs */
     line-height: 1.6; /* Adjust line height for better readability */
     font-family: 'Roboto', sans-serif; /* Example of a different font */
 }
@@ -118,9 +118,9 @@
                 if (letter.length === currentText.length) {
                     count++;
                     index = 0;
-                    setTimeout(type, 2000); // Wait for 2 seconds before typing the next text
+                    setTimeout(type, 1800); // Wait for 2 seconds before typing the next text
                 } else {
-                    setTimeout(type, 100); // Typing speed
+                    setTimeout(type, 150); // Typing speed
                 }
             }());
         });
