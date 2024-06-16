@@ -75,20 +75,27 @@
         font-weight: normal; /* Ensure font weight is normal */
     }
 
-         .work-experience {
-            display: flex;
-             background-color: rgba(0, 0, 0, 0.05); 
-            flex-direction: column;
+          .work-experience {
             margin-bottom: 20px;
+            background-color: #f0f0f0; /* Light gray background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            transition: background-color 0.3s ease; /* Smooth transition effect */
         }
-    .work-item {
-    display: flex;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        border: 1px solid #ddd;/* Subtle shadow effect */
-}
+        .work-experience:hover {
+            background-image: linear-gradient(90deg, rgba(0,124,240,0.5), rgba(0,223,216,0.5), rgba(121,40,202,0.5), rgba(255,0,128,0.5));
+        }
+        .work-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd; /* Light gray border */
+        }
+        .work-item:last-child {
+            margin-bottom: 0; /* Remove bottom margin for the last work item */
+        }
        .work-left {
             flex: 1;
           padding-right: 20px;
