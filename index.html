@@ -51,10 +51,15 @@
             border-bottom: 1px solid #fff;
             padding-bottom: 5px;
         }
-        .typing {
-            border-right: .15em solid #fff;
+       .typing {
             white-space: nowrap;
             overflow: hidden;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
         }
     </style>
 </head>
