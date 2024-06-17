@@ -73,7 +73,7 @@
             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
             font-weight: normal;
         }
-        .work-experience {
+/*         .work-experience {
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 8px;
@@ -82,6 +82,24 @@
    .work-item {
     display: flex;
     margin-bottom: 10px; /* Reduced margin for a more compact look */
+
+        .work-experience {
+    margin-bottom: 20px;
+}
+
+.work-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px; /* Increased margin for spacing between entries */
+}
+.work-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px; /* Adjust the position of the line */
+    width: 2px; /* Width of the timeline line */
+    height: 100%; /* Full height of the work item */
+    background-color: #007CF0; /* Color of the timeline line */
 }
 
 .work-left {
