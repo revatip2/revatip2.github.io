@@ -73,21 +73,21 @@
             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
             font-weight: normal;
         }
-
-.work-experience {
-    margin-bottom: 20px;
-}
-
-.work-item {
+        .work-experience {
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+   .work-item {
     display: flex;
-    margin-bottom: 30px; /* Increased margin for spacing between entries */
-    position: relative; /* Ensure relative positioning for the timeline */
-}
+    margin-bottom: 10px; /* Reduced margin for a more compact look*/
+
+       
 
 .work-left {
     flex: 0 0 auto; /* Non-flexible, fixed width for the logo */
-    margin-right: 15px; /* Margin between the logo and timeline */
-    z-index: 1; /* Ensure logo is above the timeline line */
+    margin-right: 15px; /* Reduced margin for a more compact look */
 }
 
 .work-left img {
@@ -98,57 +98,35 @@
 
 .work-right {
     flex: 1; /* Flexible width for the right side */
-    padding-left: 30px; /* Padding to separate text from timeline */
-}
-
-.timeline {
-    position: relative;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 25px; /* Adjust the position of the line */
-    width: 2px; /* Width of the timeline line */
-    height: 100%; /* Full height of the work item */
-    background-color: #007CF0; /* Color of the timeline line */
-    z-index: 0; /* Ensure the line is behind the content */
-}
-
-.timeline-item {
-    position: relative;
-    padding-left: 20px; /* Adjust padding to align with timeline */
 }
 
 .company-info {
     display: flex;
     justify-content: space-between; /* Company name on left, duration on right */
     align-items: center; /* Align items in the center */
-    margin-bottom: 2px; /* Reduced margin for spacing */
+    margin-bottom: 2px; /* Reduced margin for a more compact look */
 }
 
 .company-title {
     font-weight: bold;
-    margin: 0; /* Remove default margin */
 }
 
 .duration {
     font-style: italic;
     font-size: 0.9em; /* Adjust font size */
+    margin-left: 20px; /* Adjust spacing if needed */
 }
 
 .job-title {
     font-weight: bold;
-    margin: 2px 0; /* Margin around the job title */
+    margin: 2px 0; /* Reduced margin for a more compact look */
 }
 
 .description {
     font-size: 0.95em; /* Adjust font size */
     line-height: 1.4; /* Adjust line height for readability */
-    margin-top: 2px; /* Margin above the description */
+    margin-top: 2px; /* Reduced margin for a more compact look */
 }
-
     </style>
 </head>
 <body>
@@ -176,8 +154,6 @@
                             <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
                         </div>
                         <div class="work-right">
-                            <div class="timeline">
-                <div class="timeline-item">
                             <div class="company-info">
                                 <p class="company-title">Ford Motor Company</p>
                                 <p class="duration">Jun 2023 - Present</p>
@@ -185,8 +161,6 @@
                             <p class="job-title">Data Science Intern</p>
                             <p class="description">Analyzing and evaluating the performance of OLS and XGB models for forecasting daily sales across Ford dealerships using data stored in BigQuery, identifying areas with higher prediction errors, and recommending improvements to enhance model accuracy.</p>
                         </div>
-                    </div>
-                            </div>
                     </div>
                     <div class="work-item">
                         <div class="work-left">
