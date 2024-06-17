@@ -88,28 +88,37 @@
         .work-item:last-child {
             margin-bottom: 0;
         }
-        .work-left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-right: 20px;
-        }
-        .work-left img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .company-title {
-            font-weight: bold;
-            text-align: left;
-        }
-        .duration {
-            font-style: italic;
-            text-align: left;
-            margin-bottom: 2px;
-        }
+     .work-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.work-left img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.company-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.company-title {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 2px;
+}
+
+.duration {
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 2px;
+}
         .description {
             text-align: justify;
         }
@@ -138,12 +147,13 @@
                     <div class="work-item">
                         <div class="work-left">
                             <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
-                            
-                         
-                        </div>
-                        <div class="work-right">
+                             <div class="company-info">
                             <p class="company-title">Ford Motor Company</p>
                             <p class="duration">Data Science Intern | Jun 2023 - Present</p>
+                         </div>
+                        </div>
+                        <div class="work-right">
+                          
                             <p>Analyzing and evaluating the performance of OLS and XGB models for forecasting daily sales across Ford dealerships using data stored in BigQuery, identifying areas with higher prediction errors, and recommending improvements to enhance model accuracy.</p>
                         </div>
                     </div>
