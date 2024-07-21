@@ -255,7 +255,6 @@
 </body>
 </html>
  -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -271,6 +270,30 @@
             background-color: #000;
             color: #fff;
         }
+        nav {
+            background-color: #222;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
         header {
             display: flex;
             flex-direction: column;
@@ -279,6 +302,7 @@
             padding: 100px 20px;
             background-color: #222;
             text-align: center;
+            margin-top: 60px; /* Offset for fixed navbar */
         }
         header img {
             width: 200px;
@@ -330,9 +354,7 @@
             margin-bottom: 40px;
         }
         .section h2 {
-            margin-bottom: 20px;
-            border-bottom: 2px solid #fff;
-            padding-bottom: 10px;
+            text-align: center;
             font-size: 2em;
         }
         .work-experience {
@@ -363,6 +385,7 @@
         }
         .company-info {
             margin-bottom: 10px;
+            text-align: center;
         }
         .company-title {
             font-size: 1.5em;
@@ -377,6 +400,7 @@
             line-height: 1.4;
             list-style-type: disc;
             padding-left: 20px;
+            text-align: center;
         }
         @media screen and (max-width: 768px) {
             .work-item {
@@ -393,6 +417,12 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
     <header>
         <img src="/assets/profile_icon.jpg" alt="Revati Pawar">
         <h1>Revati Pawar</h1>
@@ -465,14 +495,14 @@
                         </div>
                         <ul class="description">
                             <li>Enhanced business outcomes through integrating ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
-                            <li>Optimized the Workday-Oracle Financials pipeline for a 60% reduction in reimbursement processing time.</li>
-                            <li>Implemented Agile methodologies, reducing data-related issues by 80% and deployment risks by 30%.</li>
+                            <li>Developed data pipelines in Python and SQL, leading to a 25% reduction in data processing time.</li>
+                            <li>Collaborated with cross-functional teams to improve user experience in digital transformation projects, increasing customer satisfaction by 30%.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/kFgM75OL_400x400.jpg" alt="Capgemini Logo">
+                        <img src="/assets/capgemini_logo.png" alt="Capgemini Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -480,9 +510,9 @@
                             <p class="job-title">Machine Learning Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Created predictive models with a 70% success rate in forecasting future marketing campaign effectiveness.</li>
-                            <li>Enhanced model accuracy by integrating additional features and using ensemble techniques.</li>
-                            <li>Developed a customer segmentation strategy for personalized marketing efforts, increasing engagement rates by 25%.</li>
+                            <li>Implemented end-to-end data pipelines in Spark, reducing data processing time by 35% and significantly enhancing model training efficiency.</li>
+                            <li>Designed and deployed a machine learning model for predicting customer churn, achieving an accuracy rate of 80% and improving retention strategies.</li>
+                            <li>Collaborated with stakeholders to refine model features and optimize performance, increasing prediction accuracy by 20%.</li>
                         </ul>
                     </div>
                 </div>
