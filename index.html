@@ -341,38 +341,48 @@
         }
         .work-item {
             display: flex;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
+            align-items: center;
         }
         .work-left {
-            margin-right: 15px;
+            flex: 0 0 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .work-left img {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
         }
         .work-right {
             flex: 1;
+            padding-left: 20px;
         }
         .company-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
-        .company-title, .job-title {
+        .company-title {
+            font-size: 1.5em;
             font-weight: bold;
         }
+        .job-title {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
         .duration {
+            font-size: 1em;
             font-style: italic;
-            font-size: 0.9em;
+            margin-bottom: 10px;
         }
         .description {
-            font-size: 0.95em;
+            font-size: 1em;
             line-height: 1.4;
+            list-style-type: disc;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -399,10 +409,13 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Ford Motor Company</p>
+                            <p class="job-title">Data Science Intern</p>
                             <p class="duration">Jun 2023 - Present</p>
                         </div>
-                        <p class="job-title">Data Science Intern</p>
-                        <p class="description">I analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data. By identifying and enhancing high-error segments, I successfully reduced the average prediction error by 30%, optimizing sales forecasting accuracy and operational efficiency.</p>
+                        <ul class="description">
+                            <li>Analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data.</li>
+                            <li>Identified and enhanced high-error segments, successfully reducing the average prediction error by 30%, optimizing sales forecasting accuracy and operational efficiency.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="work-item">
@@ -412,10 +425,13 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">University of Southern California</p>
+                            <p class="job-title">Software Engineer Intern</p>
                             <p class="duration">May 2023 - May 2024</p>
                         </div>
-                        <p class="job-title">Software Engineer Intern</p>
-                        <p class="description">I developed a full stack web application with REST APIs, Flask, SQL, and React, I enhanced efficiency by 40% in maintenance order processing and ERP integration at USC Facilities. Additionally, I designed and implemented a role-based access control system that streamlined user permissions management, optimizing operational workflows.</p>
+                        <ul class="description">
+                            <li>Developed a full stack web application with REST APIs, Flask, SQL, and React, enhancing efficiency by 40% in maintenance order processing and ERP integration at USC Facilities.</li>
+                            <li>Designed and implemented a role-based access control system that streamlined user permissions management, optimizing operational workflows.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="work-item">
@@ -425,10 +441,14 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Information Sciences Institute</p>
+                            <p class="job-title">Deep Learning Intern</p>
                             <p class="duration">May 2023 - May 2024</p>
                         </div>
-                        <p class="job-title">Deep Learning Intern</p>
-                        <p class="description">Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy, emulated a distributed environment to enable model sharding and reducing resource utilization significantly. Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, cutting experimentation time by 50% and accelerating model deployment.</p>
+                        <ul class="description">
+                            <li>Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy.</li>
+                            <li>Emulated a distributed environment to enable model sharding, reducing resource utilization significantly.</li>
+                            <li>Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, cutting experimentation time by 50% and accelerating model deployment.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="work-item">
@@ -438,10 +458,14 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Deloitte Consulting</p>
+                            <p class="job-title">Business Technology Analyst</p>
                             <p class="duration">Sep 2021 - Nov 2022</p>
                         </div>
-                        <p class="job-title">Business Technology Analyst</p>
-                        <p class="description">I enhanced business outcomes through integrating ERPs for an asset management firm to boost data flow efficiency by 40%, optimizing the Workday-Oracle Financials pipeline for a 60% reduction in reimbursement processing time, and implementing Agile methodologies to cut data-related issues by 80% and deployment risks by 30%.</p>
+                        <ul class="description">
+                            <li>Enhanced business outcomes through integrating ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
+                            <li>Optimized the Workday-Oracle Financials pipeline for a 60% reduction in reimbursement processing time.</li>
+                            <li>Implemented Agile methodologies, reducing data-related issues by 80% and deployment risks by 30%.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="work-item">
@@ -451,10 +475,14 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Capgemini</p>
-                            <p class="duration">Mar 2020 - Jun 2020</p>
+                            <p class="job-title">Machine Learning Intern</p>
+                            <p class="duration">May 2021 - Sep 2021</p>
                         </div>
-                        <p class="job-title">Machine Learning Intern</p>
-                        <p class="description">I focused on enhancing healthcare diagnostics through advanced AI. By augmenting a knee osteoarthritis dataset and improving classification accuracy, we aimed for early detection benefits. Fine-tuning a ResNet CNN achieved 98% accuracy in early detection, while refining anomaly detection with autoencoders reduced false positives by 25%, improving diagnostic precision significantly.</p>
+                        <ul class="description">
+                            <li>Created predictive models with a 70% success rate in forecasting future marketing campaign effectiveness.</li>
+                            <li>Enhanced model accuracy by integrating additional features and using ensemble techniques.</li>
+                            <li>Developed a customer segmentation strategy for personalized marketing efforts, increasing engagement rates by 25%.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
