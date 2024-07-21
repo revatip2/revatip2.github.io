@@ -331,7 +331,8 @@
             text-decoration: none;
             font-size: 24px;
         }
-/*         .typing {
+        .typing {
+            position: absolute; 
             white-space: nowrap;
             overflow: hidden;
             font-size: 2em;
@@ -340,22 +341,7 @@
             -webkit-background-clip: text;
             color: transparent;
             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
-        } */
-        .typing {
-    position: absolute; /* Ensure the element stays in place */
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 2em;
-    font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
-    -webkit-background-clip: text;
-    color: transparent;
-    /* Ensure initial position is correct */
-    left: 0;
-    top: 0;
-    text-align: center; 
-            background-color: rgba(255, 0, 0, 0.3);/* Center text within its container if needed */
-}
+        }
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
@@ -550,7 +536,7 @@
             <p>Details about your projects.</p>
         </div>
     </main>
-<!--     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const texts = ["Data Scientist", "Software Engineer", "GenAI Enthusiast"];
             let count = 0;
@@ -589,47 +575,8 @@
                 observer.observe(item);
             });
         });
-    </script> -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const texts = ["Data Scientist", "Software Engineer", "GenAI Enthusiast"];
-        let count = 0;
-        let index = 0;
-        let currentText = '';
-        let letter = '';
-        (function type() {
-            if (count === texts.length) {
-                count = 0;
-            }
-            currentText = texts[count];
-            letter = currentText.slice(0, ++index);
+    </script>
 
-            document.getElementById('typing-text').textContent = letter;
-            if (letter.length === currentText.length) {
-                count++;
-                index = 0;
-                setTimeout(type, 1500); // Wait for 1.5 seconds before typing the next text
-            } else {
-                setTimeout(type, 100); // Typing speed
-            }
-        }());
-
-        // Intersection Observer for work experience items
-        const workItems = document.querySelectorAll('.work-item');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = 1;
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.1 });
-
-        workItems.forEach(item => {
-            observer.observe(item);
-        });
-    });
-</script>
 </body>
 </html>
 
