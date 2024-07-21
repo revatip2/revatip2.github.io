@@ -260,155 +260,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Portfolio</title>
+    <title>Revati Pawar - Data Science Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: 'Montserrat', sans-serif;
-            color: #fff;
             background-color: #000;
+            color: #fff;
         }
         nav {
+            background-color: #222;
+            padding: 10px 20px;
             position: fixed;
+            width: 100%;
             top: 0;
             left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            padding: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
-        nav a {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1em;
-            font-weight: 500;
+            font-size: 1.2em;
         }
-        .header {
+        header {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            height: 100vh;
-            background: #111;
-            color: #fff;
-            padding-top: 60px; /* To avoid overlap with the fixed navbar */
+            align-items: center;
+            padding: 100px 20px;
+            background-color: #222;
             text-align: center;
+            margin-top: 60px; /* Offset for fixed navbar */
         }
-        .header img {
-            width: 250px;
-            height: 250px;
+        header img {
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
+            margin-bottom: 20px;
         }
-        .header h1 {
-            margin: 20px 0 10px;
-            font-size: 2.5em;
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        header .social-icons {
+            margin-top: 10px;
+        }
+        header .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
         }
         .typing {
             white-space: nowrap;
             overflow: hidden;
-            font-size: 1.8em;
+            font-size: 2em;
             font-family: 'Courier New', Courier, monospace;
             background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
             -webkit-background-clip: text;
             color: transparent;
             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
-            font-weight: normal;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
         }
         main {
-            padding: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .section h2 {
-            margin: 20px 0;
-            font-size: 2em;
             text-align: center;
-            color: #fff;
+            font-size: 2em;
         }
         .work-experience {
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
         .work-item {
             display: flex;
-            width: 100%;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            align-items: center;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 0.6s, transform 0.6s;
+            transition: opacity 0.5s, transform 0.5s;
         }
         .work-left {
-            flex: 1;
-            max-width: 50%;
+            flex: 0 0 200px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
         .work-left img {
-            width: 100%;
-            max-width: 200px;
-            height: auto;
+            width: 150px;
+            height: 150px;
         }
         .work-right {
             flex: 1;
-            max-width: 50%;
             padding-left: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
         .company-info {
             margin-bottom: 10px;
+            text-align: center;
         }
         .company-title {
+            font-size: 1.5em;
             font-weight: bold;
         }
         .job-title {
-            font-weight: bold;
-            margin-bottom: 10px;
+            font-size: 1.2em;
+            margin: 5px 0;
         }
         .description {
-            list-style: disc;
-            margin: 0;
-            padding: 0;
+            font-size: 1em;
+            line-height: 1.4;
+            list-style-type: disc;
             padding-left: 20px;
-            font-size: 1em;
+            text-align: center;
         }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            margin: 0 15px;
-            font-weight: 500;
+        @media screen and (max-width: 768px) {
+            .work-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .work-left {
+                margin-bottom: 20px;
+            }
+            .work-right {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#header">Home</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#projects">Projects</a>
+        <ul>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
     </nav>
-    <div class="header" id="header">
+    <header>
         <img src="/assets/profile_icon.jpg" alt="Revati Pawar">
-        <div>
-            <h1>Revati Pawar</h1>
-            <div class="typing" id="typing-text"></div>
+        <h1>Revati Pawar</h1>
+        <div class="typing" id="typing-text"></div>
+        <p>Hey there! I'm Revati, a graduate student at USC specializing in Data Science.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/revatipawar29" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/revatip2" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:rpawar@usc.edu" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
-    </div>
+    </header>
     <main>
         <div class="section" id="work-experience">
             <h2>Work Experience</h2>
             <div class="work-experience">
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/ford_logo.png" alt="Ford Logo">
+                        <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -417,14 +449,13 @@
                         </div>
                         <ul class="description">
                             <li>Analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data.</li>
-                            <li>Reduced average prediction error by 30% by identifying and enhancing high-error segments, optimizing sales forecasting accuracy.</li>
-                            <li>Collaborated with the team to improve operational efficiency and accuracy in forecasting models.</li>
+                            <li>Identified and enhanced high-error segments, successfully reducing the average prediction error by 30%, optimizing sales forecasting accuracy and operational efficiency.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/usc_logo.png" alt="USC Logo">
+                        <img src="/assets/University_of_Southern_California_Logo_square.jpg" alt="USC Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -432,15 +463,14 @@
                             <p class="job-title">Software Engineer Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Developed a full stack web application with REST APIs, Flask, SQL, and React, improving efficiency by 40% in maintenance order processing and ERP integration.</li>
-                            <li>Designed and implemented a role-based access control system, optimizing operational workflows.</li>
-                            <li>Enhanced user permissions management and streamlined processes for the Facilities department.</li>
+                            <li>Developed a full stack web application with REST APIs, Flask, SQL, and React, enhancing efficiency by 40% in maintenance order processing and ERP integration at USC Facilities.</li>
+                            <li>Designed and implemented a role-based access control system that streamlined user permissions management, optimizing operational workflows.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/isi_logo.png" alt="ISI Logo">
+                        <img src="/assets/images.jpeg" alt="ISI Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -448,15 +478,15 @@
                             <p class="job-title">Deep Learning Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Implemented network pruning for ViT, BERT models, reducing size by 30% while maintaining near-optimal accuracy.</li>
-                            <li>Emulated a distributed environment to enable model sharding, significantly reducing resource utilization.</li>
-                            <li>Utilized HPCC to run neural network simulations, optimizing hyperparameters and cutting experimentation time by 50%.</li>
+                            <li>Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy.</li>
+                            <li>Emulated a distributed environment to enable model sharding, reducing resource utilization significantly.</li>
+                            <li>Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, cutting experimentation time by 50% and accelerating model deployment.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/deloitte_logo.png" alt="Deloitte Logo">
+                        <img src="/assets/DeloitteNewSmall.png" alt="Deloitte Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -464,9 +494,9 @@
                             <p class="job-title">Business Technology Analyst</p>
                         </div>
                         <ul class="description">
-                            <li>Integrated ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
-                            <li>Optimized the Workday-Oracle Financials pipeline, reducing reimbursement processing time by 60%.</li>
-                            <li>Implemented Agile methodologies, cutting data-related issues by 80% and deployment risks by 30%.</li>
+                            <li>Enhanced business outcomes through integrating ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
+                            <li>Developed data pipelines in Python and SQL, leading to a 25% reduction in data processing time.</li>
+                            <li>Collaborated with cross-functional teams to improve user experience in digital transformation projects, increasing customer satisfaction by 30%.</li>
                         </ul>
                     </div>
                 </div>
@@ -480,9 +510,9 @@
                             <p class="job-title">Machine Learning Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Implemented end-to-end data pipelines in Spark, reducing data processing time by 35%.</li>
-                            <li>Designed and deployed a machine learning model for predicting customer churn with 80% accuracy.</li>
-                            <li>Collaborated to refine model features and optimize performance, increasing prediction accuracy by 20%.</li>
+                            <li>Implemented end-to-end data pipelines in Spark, reducing data processing time by 35% and significantly enhancing model training efficiency.</li>
+                            <li>Designed and deployed a machine learning model for predicting customer churn, achieving an accuracy rate of 80% and improving retention strategies.</li>
+                            <li>Collaborated with stakeholders to refine model features and optimize performance, increasing prediction accuracy by 20%.</li>
                         </ul>
                     </div>
                 </div>
@@ -492,6 +522,49 @@
             <h2>Projects</h2>
             <p>Details about your projects.</p>
         </div>
-    </main
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const texts = ["Data Scientist", "Software Engineer", "GenAI Enthusiast"];
+            let count = 0;
+            let index = 0;
+            let currentText = '';
+            let letter = '';
+            (function type() {
+                if (count === texts.length) {
+                    count = 0;
+                }
+                currentText = texts[count];
+                letter = currentText.slice(0, ++index);
+
+                document.getElementById('typing-text').textContent = letter;
+                if (letter.length === currentText.length) {
+                    count++;
+                    index = 0;
+                    setTimeout(type, 1500); // Wait for 1.5 seconds before typing the next text
+                } else {
+                    setTimeout(type, 100); // Typing speed
+                }
+            }());
+            
+            // Intersection Observer for work experience items
+            const workItems = document.querySelectorAll('.work-item');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            workItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+</html>
+
 
 
