@@ -255,6 +255,7 @@
 </body>
 </html>
  -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,21 +297,19 @@
         }
         header {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 100px 20px;
             background-color: #000;
+            text-align: center;
             margin-top: 60px; /* Offset for fixed navbar */
         }
         header img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            margin-right: 20px;
-        }
-        header .header-content {
-            text-align: left;
+            margin-bottom: 20px;
         }
         header h1 {
             font-size: 3em;
@@ -365,29 +364,29 @@
         }
         .work-item {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             margin-bottom: 40px;
+            align-items: center;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.5s, transform 0.5s;
         }
         .work-left {
+            flex: 0 0 200px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 20px;
         }
         .work-left img {
-            width: 300px;
-            height: 300px;
+            width: 600px;
+            height: 600px;
         }
         .work-right {
-            max-width: 800px;
-            text-align: left;
+            flex: 1;
+            padding-left: 20px;
         }
         .company-info {
             margin-bottom: 10px;
+            text-align: left;
         }
         .company-title {
             font-size: 1.5em;
@@ -402,6 +401,19 @@
             line-height: 1.4;
             list-style-type: disc;
             padding-left: 20px;
+            text-align: left;
+        }
+        @media screen and (max-width: 768px) {
+            .work-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .work-left {
+                margin-bottom: 20px;
+            }
+            .work-right {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
@@ -414,15 +426,13 @@
     </nav>
     <header>
         <img src="/assets/profile_icon.jpg" alt="Revati Pawar">
-        <div class="header-content">
-            <h1>Revati Pawar</h1>
-            <div class="typing" id="typing-text"></div>
-            <p>Hey there! I'm Revati Pawar, a Data Scientist and Software Engineer, based out of California, USA. I am a graduate student at the University of Southern California, majoring in Applied Data Science.</p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/revatipawar29" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/revatip2" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="mailto:rpawar@usc.edu" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
+        <h1>Revati Pawar</h1>
+        <div class="typing" id="typing-text"></div>
+        <p>Hey there! I'm Revati Pawar, a Data Scientist and Software Engineer, based out of California, USA. I am a graduate student at the University of Southern California, majoring in Applied Data Science.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/revatipawar29" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/revatip2" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:rpawar@usc.edu" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
     <main>
@@ -439,8 +449,8 @@
                             <p class="job-title">Data Science Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data.</li>
-                            <li>Identified and enhanced high-error segments, successfully reducing the average prediction error by 30%, optimizing sales forecasting accuracy and operational efficiency.</li>
+                            <li>Analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data and Vertex AI.</li>
+                            <li>Deployed machine learning models to production, improving sales prediction accuracy by 30% in high error segments, resulting in a potential $400 million increase in revenue.</li>
                         </ul>
                     </div>
                 </div>
@@ -454,8 +464,11 @@
                             <p class="job-title">Software Engineer Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Developed a full stack web application with REST APIs, Flask, SQL, and React, enhancing efficiency by 40% in maintenance order processing and ERP integration at USC Facilities.</li>
-                            <li>Designed and implemented a role-based access control system that streamlined user permissions management, optimizing operational workflows.</li>
+                            <li>Predicted equipment failures using time series forecasting, resulting in a 15% increase in equipment uptime.</li>
+                            <li>Developed a full stack web app using REST APIs, Flask (Python), SQL, and React for frontend, for maintenance order submissions and integrated with ERP systems, resulting in a 40% increase in efficiency for USC Facilities.</li>
+                            <li>Designed and integrated role-based access control system to manage user permissions effectively.</li>
+                            <li>Analyzed a SQL database of 10K+ work orders and identified 10 operational inefficiencies crucial for cost savings.</li>
+                            <li>Migrated legacy asset management system to a new platform, achieving zero data losses and enhanced security.</li>
                         </ul>
                     </div>
                 </div>
@@ -466,11 +479,11 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Information Sciences Institute</p>
-                            <p class="job-title">Deep Learning Intern</p>
+                            <p class="job-title">Applied Science Intern</p>
                         </div>
                         <ul class="description">
                             <li>Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy.</li>
-                            <li>Emulated a distributed environment to enable model sharding, reducing resource utilization significantly.</li>
+                            <li>Emulated a distributed environment to enable model sharding and reducing resource utilization significantly.</li>
                             <li>Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, cutting experimentation time by 50% and accelerating model deployment.</li>
                         </ul>
                     </div>
@@ -482,18 +495,19 @@
                     <div class="work-right">
                         <div class="company-info">
                             <p class="company-title">Deloitte Consulting</p>
-                            <p class="job-title">Business Technology Analyst</p>
+                            <p class="job-title">Software Engineer</p>
                         </div>
                         <ul class="description">
-                            <li>Enhanced business outcomes through integrating ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
-                            <li>Developed data pipelines in Python and SQL, leading to a 25% reduction in data processing times and enhancing business intelligence capabilities.</li>
-                            <li>Executed advanced data analysis techniques and trained client teams, improving decision-making speed and quality.</li>
+                            <li>Implemented end-to-end software integrations between ERPs for an asset management firm, leveraging REST APIs, ETL techniques, and custom scripts, achieving a 40% increase in data flow efficiency.</li>
+                            <li>Cut reimbursement processing time by 60% by optimizing Workday-Oracle Financials pipeline and reconciliations./li>
+                            <li>Led root cause analysis on production bugs, implementing solutions that cut data-related issues by 80%.</li>
+                            <li>Applied Agile principles and optimized CI/CD workflows, reducing deployment risks by 30%.</li>
                         </ul>
                     </div>
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/Capgemini_logo.png" alt="Capgemini Logo">
+                        <img src="/assets/capgemini_logo.png" alt="Capgemini Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -501,9 +515,9 @@
                             <p class="job-title">Machine Learning Intern</p>
                         </div>
                         <ul class="description">
-                            <li>Developed and optimized regression models for sales forecasts using Python, enhancing predictive accuracy by 25%.</li>
-                            <li>Implemented and trained complex neural network architectures for product recommendations, increasing recommendation accuracy by 15%.</li>
-                            <li>Engineered data preprocessing pipelines using Pandas and NumPy, boosting model training efficiency by 30%.</li>
+                            <li>Augmented knee osteoarthritis dataset, increasing size by 95%, and improving classification model accuracy by 5%.</li>
+                            <li>Fine-tuned a pre-trained Convolutional Neural Network (CNN), ResNet, for early detection, achieving 98% accuracy.</li>
+                            <li>Collaborated with medical experts to refine and deploy the anomaly detection model using autoencoders, resulting in a 25% reduction in false positives and improving diagnostic precision.</li>
                         </ul>
                     </div>
                 </div>
@@ -511,35 +525,43 @@
         </div>
         <div class="section" id="projects">
             <h2>Projects</h2>
-            <!-- Add project details here -->
+            <p>Details about your projects.</p>
         </div>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const text = 'Data Scientist | Software Engineer | Lifelong Learner';
+            const texts = ["Data Scientist", "Software Engineer", "GenAI Enthusiast"];
+            let count = 0;
             let index = 0;
-
-            function typeText() {
-                if (index < text.length) {
-                    document.getElementById('typing-text').innerHTML += text.charAt(index);
-                    index++;
-                    setTimeout(typeText, 100);
+            let currentText = '';
+            let letter = '';
+            (function type() {
+                if (count === texts.length) {
+                    count = 0;
                 }
-            }
+                currentText = texts[count];
+                letter = currentText.slice(0, ++index);
 
-            typeText();
-
+                document.getElementById('typing-text').textContent = letter;
+                if (letter.length === currentText.length) {
+                    count++;
+                    index = 0;
+                    setTimeout(type, 1500); // Wait for 1.5 seconds before typing the next text
+                } else {
+                    setTimeout(type, 100); // Typing speed
+                }
+            }());
+            
+            // Intersection Observer for work experience items
             const workItems = document.querySelectorAll('.work-item');
-            let observer = new IntersectionObserver(entries => {
+            const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = 1;
                         entry.target.style.transform = 'translateY(0)';
                     }
                 });
-            }, {
-                threshold: 0.5
-            });
+            }, { threshold: 0.1 });
 
             workItems.forEach(item => {
                 observer.observe(item);
@@ -548,7 +570,6 @@
     </script>
 </body>
 </html>
-
 
 
 
