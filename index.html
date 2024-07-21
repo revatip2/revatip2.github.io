@@ -344,7 +344,9 @@
             background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
             -webkit-background-clip: text;
             color: transparent;
-            animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
+/*             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite; */
+            animation: typing 2s steps(30, end), blink-caret .75s step-end infinite; 
+            transition: width 1.5s ease-in-out;
         }
         @keyframes typing {
             from { width: 0; }
