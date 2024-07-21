@@ -331,7 +331,7 @@
             text-decoration: none;
             font-size: 24px;
         }
-        .typing {
+/*         .typing {
             white-space: nowrap;
             overflow: hidden;
             font-size: 2em;
@@ -340,7 +340,21 @@
             -webkit-background-clip: text;
             color: transparent;
             animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
-        }
+        } */
+        .typing {
+    position: absolute; /* Ensure the element stays in place */
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
+    -webkit-background-clip: text;
+    color: transparent;
+    /* Ensure initial position is correct */
+    left: 0;
+    top: 0;
+    text-align: center; /* Center text within its container if needed */
+}
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
