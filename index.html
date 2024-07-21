@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -246,6 +246,243 @@
                     count++;
                     index = 0;
                     setTimeout(type, 1500); // Wait for 2 seconds before typing the next text
+                } else {
+                    setTimeout(type, 100); // Typing speed
+                }
+            }());
+        });
+    </script>
+</body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revati Pawar - Data Science Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            background-color: #111;
+            text-align: center;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        header .social-icons {
+            margin-top: 10px;
+        }
+        header .social-icons a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .typing {
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 1.8em;
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(90deg, #007CF0, #00DFD8, #7928CA, #FF0080);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: typing 1.5s steps(30, end), blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #fff; }
+        }
+        main {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        .work-experience {
+            display: flex;
+            flex-direction: column;
+        }
+        .work-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+        .work-left {
+            margin-right: 15px;
+        }
+        .work-left img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .work-right {
+            flex: 1;
+        }
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .company-title, .job-title {
+            font-weight: bold;
+        }
+        .duration {
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        .description {
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/assets/profile_icon.jpg" alt="Revati Pawar">
+        <div>
+            <h1>Revati Pawar</h1>
+            <div class="typing" id="typing-text"></div>
+            <p>Hey there! I'm Revati, a graduate student at USC specializing in Data Science.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/revatipawar29" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/revatip2" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:rpawar@usc.edu" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="section" id="work-experience">
+            <h2>Work Experience</h2>
+            <div class="work-experience">
+                <div class="work-item">
+                    <div class="work-left">
+                        <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
+                    </div>
+                    <div class="work-right">
+                        <div class="company-info">
+                            <p class="company-title">Ford Motor Company</p>
+                            <p class="duration">Jun 2023 - Present</p>
+                        </div>
+                        <p class="job-title">Data Science Intern</p>
+                        <p class="description">I analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data. By identifying and enhancing high-error segments, I successfully reduced the average prediction error by 30%, optimizing sales forecasting accuracy and operational efficiency.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-left">
+                        <img src="/assets/University_of_Southern_California_Logo_square.jpg" alt="USC Logo">
+                    </div>
+                    <div class="work-right">
+                        <div class="company-info">
+                            <p class="company-title">University of Southern California</p>
+                            <p class="duration">May 2023 - May 2024</p>
+                        </div>
+                        <p class="job-title">Software Engineer Intern</p>
+                        <p class="description">I developed a full stack web application with REST APIs, Flask, SQL, and React, I enhanced efficiency by 40% in maintenance order processing and ERP integration at USC Facilities. Additionally, I designed and implemented a role-based access control system that streamlined user permissions management, optimizing operational workflows.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-left">
+                        <img src="/assets/images.jpeg" alt="ISI Logo">
+                    </div>
+                    <div class="work-right">
+                        <div class="company-info">
+                            <p class="company-title">Information Sciences Institute</p>
+                            <p class="duration">May 2023 - May 2024</p>
+                        </div>
+                        <p class="job-title">Deep Learning Intern</p>
+                        <p class="description">Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy, emulated a distributed environment to enable model sharding and reducing resource utilization significantly. Utilized HPCC to run complex neural network simulations, optimizing hyperparameters and model architectures, cutting experimentation time by 50% and accelerating model deployment.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-left">
+                        <img src="/assets/DeloitteNewSmall.png" alt="Deloitte Logo">
+                    </div>
+                    <div class="work-right">
+                        <div class="company-info">
+                            <p class="company-title">Deloitte Consulting</p>
+                            <p class="duration">Sep 2021 - Nov 2022</p>
+                        </div>
+                        <p class="job-title">Business Technology Analyst</p>
+                        <p class="description">I enhanced business outcomes through integrating ERPs for an asset management firm to boost data flow efficiency by 40%, optimizing the Workday-Oracle Financials pipeline for a 60% reduction in reimbursement processing time, and implementing Agile methodologies to cut data-related issues by 80% and deployment risks by 30%.</p>
+                    </div>
+                </div>
+                <div class="work-item">
+                    <div class="work-left">
+                        <img src="/assets/kFgM75OL_400x400.jpg" alt="Capgemini Logo">
+                    </div>
+                    <div class="work-right">
+                        <div class="company-info">
+                            <p class="company-title">Capgemini</p>
+                            <p class="duration">Mar 2020 - Jun 2020</p>
+                        </div>
+                        <p class="job-title">Machine Learning Intern</p>
+                        <p class="description">I focused on enhancing healthcare diagnostics through advanced AI. By augmenting a knee osteoarthritis dataset and improving classification accuracy, we aimed for early detection benefits. Fine-tuning a ResNet CNN achieved 98% accuracy in early detection, while refining anomaly detection with autoencoders reduced false positives by 25%, improving diagnostic precision significantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="projects">
+            <h2>Projects</h2>
+            <p>Details about your projects.</p>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const texts = ["Data Scientist", "Software Engineer", "GenAI Enthusiast"];
+            let count = 0;
+            let index = 0;
+            let currentText = '';
+            let letter = '';
+            (function type() {
+                if (count === texts.length) {
+                    count = 0;
+                }
+                currentText = texts[count];
+                letter = currentText.slice(0, ++index);
+
+                document.getElementById('typing-text').textContent = letter;
+                if (letter.length === currentText.length) {
+                    count++;
+                    index = 0;
+                    setTimeout(type, 1500); // Wait for 1.5 seconds before typing the next text
                 } else {
                     setTimeout(type, 100); // Typing speed
                 }
