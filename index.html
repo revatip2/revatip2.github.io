@@ -342,21 +342,20 @@
         .work-item {
             display: flex;
             margin-bottom: 40px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
             align-items: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
         }
         .work-left {
-            flex: 0 0 150px;
+            flex: 0 0 200px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .work-left img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 150px;
+            height: 150px;
         }
         .work-right {
             flex: 1;
@@ -373,16 +372,23 @@
             font-size: 1.2em;
             margin: 5px 0;
         }
-        .duration {
-            font-size: 1em;
-            font-style: italic;
-            margin-bottom: 10px;
-        }
         .description {
             font-size: 1em;
             line-height: 1.4;
             list-style-type: disc;
             padding-left: 20px;
+        }
+        @media screen and (max-width: 768px) {
+            .work-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .work-left {
+                margin-bottom: 20px;
+            }
+            .work-right {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
@@ -410,7 +416,6 @@
                         <div class="company-info">
                             <p class="company-title">Ford Motor Company</p>
                             <p class="job-title">Data Science Intern</p>
-                            <p class="duration">Jun 2023 - Present</p>
                         </div>
                         <ul class="description">
                             <li>Analyzed Ordinary Least Squares (OLS) and XGBoost (XGB) models to forecast daily sales across over 3,000 Ford dealerships using BigQuery data.</li>
@@ -426,7 +431,6 @@
                         <div class="company-info">
                             <p class="company-title">University of Southern California</p>
                             <p class="job-title">Software Engineer Intern</p>
-                            <p class="duration">May 2023 - May 2024</p>
                         </div>
                         <ul class="description">
                             <li>Developed a full stack web application with REST APIs, Flask, SQL, and React, enhancing efficiency by 40% in maintenance order processing and ERP integration at USC Facilities.</li>
@@ -442,7 +446,6 @@
                         <div class="company-info">
                             <p class="company-title">Information Sciences Institute</p>
                             <p class="job-title">Deep Learning Intern</p>
-                            <p class="duration">May 2023 - May 2024</p>
                         </div>
                         <ul class="description">
                             <li>Implemented network pruning for ViT, BERT models, reducing size by 30% and maintaining near-optimal accuracy.</li>
@@ -459,7 +462,6 @@
                         <div class="company-info">
                             <p class="company-title">Deloitte Consulting</p>
                             <p class="job-title">Business Technology Analyst</p>
-                            <p class="duration">Sep 2021 - Nov 2022</p>
                         </div>
                         <ul class="description">
                             <li>Enhanced business outcomes through integrating ERPs for an asset management firm, boosting data flow efficiency by 40%.</li>
@@ -476,7 +478,6 @@
                         <div class="company-info">
                             <p class="company-title">Capgemini</p>
                             <p class="job-title">Machine Learning Intern</p>
-                            <p class="duration">May 2021 - Sep 2021</p>
                         </div>
                         <ul class="description">
                             <li>Created predictive models with a 70% success rate in forecasting future marketing campaign effectiveness.</li>
@@ -515,6 +516,21 @@
                     setTimeout(type, 100); // Typing speed
                 }
             }());
+            
+            // Intersection Observer for work experience items
+            const workItems = document.querySelectorAll('.work-item');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            workItems.forEach(item => {
+                observer.observe(item);
+            });
         });
     </script>
 </body>
