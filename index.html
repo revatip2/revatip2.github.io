@@ -115,10 +115,13 @@
             display: flex;
             margin-bottom: 40px;
             align-items: center;
-            /* Remove opacity and transform to make items visible */
-            /* opacity: 0;
-            transform: translateY(50px); */
+            opacity: 0;
+            transform: translateY(50px);
             transition: opacity 0.5s, transform 0.5s;
+        }
+        .work-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         .work-left {
             flex: 0 0 200px;
@@ -224,7 +227,7 @@
             <div class="work-experience">
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/Ford.png" alt="Ford Logo">
+                        <img src="/assets/Dt5ZJBL6_400x400.png" alt="Ford Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -239,7 +242,7 @@
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/USC.jpg" alt="USC Logo">
+                        <img src="/assets/University_of_Southern_California_Logo.png" alt="USC Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -254,7 +257,7 @@
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/USC-ISI.jpeg" alt="ISI Logo">
+                        <img src="/assets/USC-ISI.jpg" alt="ISI Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -269,7 +272,7 @@
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/Deloitte.png" alt="Deloitte Logo">
+                        <img src="/assets/Deloitte-Logo.jpg" alt="Deloitte Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -284,7 +287,7 @@
                 </div>
                 <div class="work-item">
                     <div class="work-left">
-                        <img src="/assets/Capgemini.jpg" alt="Capgemini Logo">
+                        <img src="/assets/Capgemini.png" alt="Capgemini Logo">
                     </div>
                     <div class="work-right">
                         <div class="company-info">
@@ -325,5 +328,23 @@
             </div>
         </div>
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const workItems = document.querySelectorAll(".work-item");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            workItems.forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
 </body>
 </html>
