@@ -373,6 +373,37 @@
                 observer.observe(item);
             });
         });
+        document.addEventListener("DOMContentLoaded", function () {
+    const typingTextElement = document.getElementById("typing-text");
+    const typingTexts = ["Data Scientist", "Software Engineer", "Analyst","AI Enthusiast"];
+    let textIndex = 0;
+    let charIndex = 0;
+    let currentText = '';
+    let isDeleting = false;
+
+    function type() {
+        if (isDeleting) {
+            currentText = typingTexts[textIndex].substring(0, charIndex--);
+        } else {
+            currentText = typingTexts[textIndex].substring(0, charIndex++);
+        }
+
+        typingTextElement.textContent = currentText;
+
+        if (!isDeleting && charIndex === typingTexts[textIndex].length) {
+            isDeleting = true;
+            setTimeout(type, 1000); // Pause before deleting
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % typingTexts.length;
+            setTimeout(type, 500); // Pause before typing next word
+        } else {
+            setTimeout(type, isDeleting ? 50 : 100);
+        }
+    }
+
+    type();
+});
     </script>
 </body>
 </html>
