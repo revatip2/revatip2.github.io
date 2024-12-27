@@ -1,0 +1,97 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+.projects-section {
+  padding: 1rem 2rem; /* Match padding from the About section */
+  background-color: #ffffff; /* White background */
+  color: #030a54; /* Dark Blue text */
+   font-family: 'DM Serif Text', sans-serif; /* Same font as About section */
+  border-left: 85px solid #ffffff; /* Match left border from About section */
+  border-right: 85px solid #ffffff; /* Match right border from About section */
+  
+}
+
+.project-item {
+  display: flex;
+  align-items: center; /* Center image and text vertically */
+  margin-bottom: 0rem; /* Space between projects */
+  padding-bottom: 0rem;
+}
+
+.project-item:last-child {
+  border-bottom: none; /* Remove the border for the last project */
+}
+
+.project-image {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  width: 40%; /* Image takes up 1/4 of the width */
+  margin-right: 2rem; /* Space between image and text */
+}
+
+.project-image img {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.project-text {
+  flex: 1; /* Allow text to take up remaining space */
+  text-align: left; /* Left justify the text */
+}
+
+.project-text h3 {
+  font-size: 2rem;
+  color: #003f5c; /* Dark Blue for headings */
+  margin-bottom: 1rem;
+   font-family: 'DM Serif Text', serif;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #003f5c; /* Dark Blue for headings */
+  margin-bottom: 1rem;
+   font-family: 'DM Serif Text', serif;
+}
+
+.project-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #003f5c; /* Dark Blue text */
+  font-family: 'Raleway', serif;
+}
+
+.project-text .github-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.project-text .github-link img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.project-text .github-link:hover img {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.project-text .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Space between each skill tile */
+    margin-top: 10px; /* Space above skills section */
+    justify-content: center; /* Center the items horizontally */
+    width: 100%; /* Ensure the container takes up the full width */
+  }
+  
+  
+  .project-text .skills .skill-tile {
+    background-color: #003f5c; /* Dark blue background */
+    color: #ffffff; /* White text */
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 12px; /* Rounded corners */
+    text-transform: capitalize; /* Capitalize each word */
+    display: inline-block;
+  }
+

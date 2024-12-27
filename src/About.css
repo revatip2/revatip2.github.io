@@ -1,0 +1,88 @@
+.about-section {
+  padding: 2rem 2rem;
+  background-color: #ffffff; /* White background */
+  color: #030a54; /* Dark Blue text */
+  font-family: 'Raleway', sans-serif; /* Body text in Raleway */
+  border-left: 50px solid #ffffff; /* Dark Blue left border */
+  border-right: 50px solid #ffffff; /* Dark Blue right border */
+  margin-bottom: 60px;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start; /* Align text top with the top of the image */
+  justify-content: flex-start; /* Align content to the left */
+  max-width: 100%; /* Use full width */
+  margin: 0 auto; /* Center the content */
+  padding: 0 2rem; /* Padding between content and borders */
+}
+
+.text-content {
+  flex: 1; /* Allow text to take up remaining space */
+  max-width: 95%; /* Text section takes up 3/4 of the container width */
+  text-align: left; /* Left justify the text */
+  
+  justify-content: flex-start;
+}
+
+.video-container {
+  flex-shrink: 0; /* Prevent video from shrinking */
+  width: 50%; /* Video takes up 1/4 of the width */
+  margin-left: 2rem; /* Space between video and text */
+  margin-right: -8rem;
+}
+
+.image-container {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  width: 35%; /* Image takes up 1/4 of the width */
+  margin-left: 2rem; /* Space between image and text */
+}
+
+.profile-video {
+  width: 100%; /* Make the video responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the video fills the space without distortion */
+  border-radius: 8px; /* Rounded corners for the video */
+}
+.profile-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fills the space without distortion */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.about-section h2 {
+  font-size: 4rem;
+  color: #003f5c; /* Dark Blue for headings */
+  font-family: 'DM Serif Text', serif; /* Apply DM Serif Text for headings */
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #003f5c; /* Dark Blue text */
+}
+
+/* Change the order of text and image */
+.about-content {
+  flex-direction: row-reverse; /* Make the image appear on the right */
+}
+
+.social-links {
+  margin-top: 2rem; /* Space between body and social links */
+  display: flex;
+  gap: 1.5rem; /* Space between social media icons */
+}
+
+.social-links a {
+  font-size: 2rem; /* Set icon size */
+  color: #003f5c; /* Dark blue for icon color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-links a:hover {
+  color: #ffcc00; /* Golden color on hover */
+}

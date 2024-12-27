@@ -1,0 +1,48 @@
+#about, #projects, #education, #experiences, #contact {
+  scroll-margin-top: 80px; /* Adjust based on your navbar height */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff; /* White background for navbar */
+  color: #003f5c; /* Dark Blue text */
+  font-family: 'Raleway', sans-serif;
+  border-left: 75px solid #ffffff; /* Dark Blue left border */
+  border-right: 80px solid #ffffff; /* Dark Blue right border */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'DM Serif Text', serif; /* Apply DM Serif Text for the title */
+
+  color: #003f5c; /* Dark Blue logo text */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #003f5c; /* Dark Blue links */
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar ul li a:hover {
+  color: #000000; /* Black hover effect */
+  transform: scale(2); /* Slight zoom effect */
+  transition: color 0.3s, transform 0.2s;
+}

@@ -1,0 +1,28 @@
+.section {
+    padding: 4rem 2rem;
+    background-color: #ffffff; /* White background */
+    color: #003f5c; /* Dark Blue text */
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    color: #003f5c; /* Dark Blue for headers */
+    margin-bottom: 1.5rem; /* Space between header and content */
+    font-family: 'DM Serif Text', serif; /* Apply DM Serif Text for the title */
+
+  }
+  
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px; /* Limit paragraph width for better readability */
+    color: #003f5c; /* Dark Blue text */
+  }
+
+  .section {
+    border-bottom: 1px solid #003f5c; /* Thin dark blue border */
+  }
+  
