@@ -4,7 +4,9 @@ import Navbar from './Navbar';
 import About from './About';
 import Projects from './Projects';
 import Education from './Education';
-import Experience from './Experience';
+// import Experience from './Experience';
+import Footer from './Footer';  // Import the Footer component
+
 import Contact from './Contact';
 
 function App() {
@@ -20,7 +22,8 @@ function App() {
       </Routes>
       {/* Projects will be shown directly on the main page */}
       <Projects />
-      <Experience />
+      {/* <Experience /> */}
+      <Footer />
     </Router>
   );
 }
