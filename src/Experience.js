@@ -40,7 +40,7 @@ const Experience = () => {
     },
     {
       title: 'Machine Learning Intern',
-      company: 'Capegmini',
+      company: 'Capgemini',
       duration: 'March 2020 - June 2020',
       description: 'Analyzed financial data to provide actionable insights for clients.',
       skills: ['Python', 'Data Analysis', 'Bayesian Inference', 'Survival Analysis'],
