@@ -24,7 +24,7 @@ const Navbar = () => {
         <li><Link to="#about">About</Link></li>
         <li><Link to="#projects">Projects</Link></li> {/* Scroll to Projects section */}
         <li><Link to="#education">Education</Link></li>
-        {/* <li><Link to="#experiences">Experiences</Link></li> */}
+        <li><Link to="#education">Experience</Link></li>
         <li><Link to="#contact">Contact</Link></li>
       </ul>
     </nav>

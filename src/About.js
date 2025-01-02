@@ -61,6 +61,10 @@ const About = () => {
           </div>
         </div>
       </div>
+        {/* Downward Arrow */}
+        <div className="scroll-arrow">
+        <i className="fas fa-chevron-down"></i>
+      </div>
     </section>
   );
 };

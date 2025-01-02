@@ -1,76 +1,113 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .experience-section {
-    padding: 1rem 2rem;
-    background-color: #ffffff; /* White background */
-    color: #030a54; /* Dark Blue text */
-    font-family: 'DM Serif Text', sans-serif;
-    border-left: 85px solid #ffffff;
-    border-right: 85px solid #ffffff;
-    margin-top: -140px;
-  }
-  
-  h2 {
-    font-size: 2rem;
-    color: #003f5c; /* Dark Blue for headings */
-    
-    font-family: 'DM Serif Text', serif;
-  }
-  
-  .experience-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Space between each experience item */
-  }
-  
-  .experience-item {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    
-  }
-  
-  .experience-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
-    flex-direction: column;
-  }
-  
-  .experience-title {
-    font-size: 1.5rem;
-    color: #003f5c;
-  }
-  
-  .company-name {
-    font-size: 1.1rem;
-    color: #006e8e; /* Lighter blue for the company name */
-  }
-  
-  .dates {
-    font-size: 1rem;
-    color: #999999; /* Gray for date range */
-    margin-top: 0.5rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #003f5c;
-  
-  }
-  
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 10px;
-  }
-  
-  .skill-tile {
-    background-color: #003f5c; /* Dark blue background */
-    color: #ffffff; /* White text */
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    border-radius: 12px;
-    text-transform: capitalize;
-  }
-  
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  color: #030a54;
+  border-left: 85px solid #ffffff;
+  border-right: 85px solid #ffffff;
+  margin-top: -140px;
+  position: relative;
+}
+
+/* Vertical line through the entire experience list */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  padding-left: 2rem; /* Adjust for the line and dot position */
+}
+
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 0.2rem; /* Position the line */
+  top: 50px;
+  bottom: 00px;
+  width: 2px;
+  background-color: #003f5c; /* Dark blue line */
+}
+
+/* Each experience item */
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.experience-item::before {
+  content: '';
+  position: absolute;
+  left: -2.2rem; /* Position the dot relative to the line */
+  top: 2.3rem; /* Align the dot with the title */
+  width: 10px;
+  height: 10px;
+  background-color: #003f5c; /* Dot color */
+  border-radius: 50%;
+  border: 2px solid #ffffff; /* White border for the dot */
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  margin-bottom: 0.2rem;
+}
+
+.experience-title {
+  font-size: 1.2rem;
+  color: #003f5c;
+  margin-bottom: 0rem;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  color: #006e8e;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.dates {
+  font-size: 1rem;
+  color: #999999;
+  margin-top: 0rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Bullet-style for descriptions */
+.description {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #003f5c;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding-left: 0rem;
+}
+
+.description::before {
+  content: '> ';
+  color: #003f5c;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.skill-tile {
+  background-color: #003f5c;
+  color: #ffffff;
+  padding: 4px 10px;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  text-transform: capitalize;
+}

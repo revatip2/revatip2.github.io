@@ -86,3 +86,28 @@
 .social-links a:hover {
   color: #ffcc00; /* Golden color on hover */
 }
+
+.scroll-arrow {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+  bottom: -20px; /* Move the arrow a little outside the section */
+}
+
+.scroll-arrow i {
+  font-size: 3rem;
+  color: #003f5c; /* Dark Blue */
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}

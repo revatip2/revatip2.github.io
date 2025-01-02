@@ -1,0 +1,29 @@
+.contact-section {
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    color: #030a54;
+    border-left: 85px solid #ffffff;
+    border-right: 85px solid #ffffff;
+    margin-top: 0px;
+    position: relative;
+  }
+  
+  .contact-description {
+    font-size: 1.1rem;
+    color: #003f5c;
+    margin-bottom: 0rem;
+  }
+  
+  .contact-email {
+    font-size: 1.1rem;
+    color: #003f5c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-email:hover {
+   
+    color: #f4b400;
+    text-decoration: underline;
+  }
+  
