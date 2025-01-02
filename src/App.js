@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import About from './About';
 import Projects from './Projects';
 import Education from './Education';
-import Experience from './Experience';
 import Footer from './Footer'; 
 import MainContent from './MainContent';
 
