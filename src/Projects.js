@@ -40,6 +40,12 @@ const carouselProjects = [
     githubLink: "https://github.com/revatip2/Survival-Analysis-using-R"
     },
     {
+      title: "Reddit Web Scraper and Cluster Analysis",
+      description: "A Python-based web scraper that collects Reddit post data, preprocesses it, clusters posts using KMeans, and allows interactive querying of clusters through a menu interface.",
+      skills: ["Python", "BeautifulSoup", "Requests", "Pandas", "KMeans", "Scikit-learn", "Plotly", "NLTK", "Regex"],
+      githubLink: "https://github.com/revatip2/Reddit-Web-Scraper-and-Clustering"
+    },
+    {
     title: "Social Network Analysis",
     description: "Social Network analysis to identify key communities, providing insights for better marketing targeting and customer engagement",
     skills: ["Python", "NLP", "LLM", "BERT", "RAG"],
