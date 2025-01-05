@@ -12,7 +12,7 @@ const Education = () => {
     },
     {
       school: 'Maharashtra Institute of Technology',
-      course: 'Bachelors in Electronics Engineering (Specialization in Artificial Intelligence)',
+      course: 'Bachelors in Electronics Engineering (Specialization in CS/AI)',
       duration: 'July 2017 - August 2021',
       gpa: 'GPA: 9.66/10.0',
       coursework: ['Algorithms', 'Operating Systems', 'Database Systems', 'Software Engineering'],
