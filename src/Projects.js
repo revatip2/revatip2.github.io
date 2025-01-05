@@ -46,9 +46,15 @@ const carouselProjects = [
       githubLink: "https://github.com/revatip2/Reddit-Web-Scraper-and-Clustering"
     },
     {
+      title: "Algorithmic Trading and Portfolio Management",
+      description: "A comprehensive stock portfolio management system that combines database management, stock data preprocessing, LSTM-based price prediction models, and a trading strategy. This Python-based project allows users to manage portfolios, track stocks, calculate financial metrics, train models, and execute trading decisions based on predictions.",
+      skills: ["Python", "SQL", "Pandas", "BeautifulSoup", "Selenium", "NumPy", "TensorFlow", "Keras", "Sharpe Ratio","Financial Metrics"],
+      githubLink: "https://github.com/revatip2/Algorithmic-trading-and-Stock-Price-Analysis"
+    },
+    {
     title: "Social Network Analysis",
     description: "Social Network analysis to identify key communities, providing insights for better marketing targeting and customer engagement",
-    skills: ["Python", "NLP", "LLM", "BERT", "RAG"],
+    skills: ["Python", "PySpark", "Graph Analysis"],
     githubLink: "https://github.com/revatip2/Social-Network-Graphs-Community-Detection-and-Betweenness-Centrality"
     },
     {
