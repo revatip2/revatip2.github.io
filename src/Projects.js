@@ -47,8 +47,8 @@ const carouselProjects = [
     },
     {
       title: "Algorithmic Trading and Portfolio Management",
-      description: "A comprehensive stock portfolio management system that combines database management, stock data preprocessing, LSTM-based price prediction models, and a trading strategy. This Python-based project allows users to manage portfolios, track stocks, calculate financial metrics, train models, and execute trading decisions based on predictions.",
-      skills: ["Python", "SQL", "Pandas", "BeautifulSoup", "Selenium", "NumPy", "TensorFlow", "Keras", "Sharpe Ratio","Financial Metrics"],
+      description: "A stock portfolio management system that combines database management, LSTM-based price prediction models, and a trading strategy. It allows users to manage portfolios, calculate financial metrics, and execute trading decisions.",
+      skills: ["Python", "BeautifulSoup", "Selenium", "NumPy", "TensorFlow", "Keras"],
       githubLink: "https://github.com/revatip2/Algorithmic-trading-and-Stock-Price-Analysis"
     },
     {
