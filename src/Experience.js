@@ -3,10 +3,10 @@ import './Experience.css';
 
 const Experience = () => {
   const experiences = [
-    {
-      title: 'Data Science & Software - Student Lead',
-      company: 'University of Southern California',
-      duration: 'August 2024 - December 2024',
+     {
+      title: 'Machine Learning Engineer',
+      company: 'Dragin Technologies LLC',
+      duration: 'Feb 2025 - Present',
       description: 'Working on recommendation algorithms to personalize content for users.',
       skills: ['Python', 'Machine Learning', 'Collaborative Filtering', 'Data Engineering'],
     },
@@ -17,22 +17,23 @@ const Experience = () => {
       description: 'Working on recommendation algorithms to personalize content for users.',
       skills: ['Python', 'Machine Learning', 'Collaborative Filtering', 'Data Engineering'],
     },
-    {
-      title: 'Data Science & Software Intern',
+     {
+      title: 'Data Science & Software - Student Lead',
       company: 'University of Southern California',
-      duration: 'May 2023 - May 2024',
-      description: 'Built sales forecasting models using XGBoost and OLS regression.',
-      skills: ['XGBoost', 'OL Regression', 'Data Visualization', 'SQL'],
+      duration: 'May 2023 - December 2024',
+      description: 'Working on recommendation algorithms to personalize content for users.',
+      skills: ['Python', 'Machine Learning', 'Collaborative Filtering', 'Data Engineering'],
     },
+   
     {
-      title: 'Research Assistant',
+      title: 'AI Research Assistant',
       company: 'USC Information Sciences Institute',
       duration: 'May 2023 - May 2024',
       description: 'Built sales forecasting models using XGBoost and OLS regression.',
       skills: ['XGBoost', 'OL Regression', 'Data Visualization', 'SQL'],
     },
     {
-      title: 'Software Engineer - Analyst',
+      title: 'Software Engineer',
       company: 'Deloitte Consulting',
       duration: 'September 2021 - November 2022',
       description: 'Analyzed financial data to provide actionable insights for clients.',

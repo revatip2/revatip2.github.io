@@ -48,7 +48,7 @@ const About = () => {
         <div className="text-content">
           <h2>Hi! I'm Revati Pawar.</h2>
           <p>
-          I recently graduated with a Master's in Applied Data Science from the University of Southern California. I'm passionate about Artificial Intelligence, Machine Learning, Natural Language Processing, and Software Engineering. Outside of work, I enjoy hiking, playing pickleball, and creating art.      </p>
+          I'm Revati Pawar, a fintech Machine Learning Engineer in New York (M.S., Applied Data Science — USC). I build end-to-end ML products that help finance teams make faster, more reliable decisions -— from transformer-based document understanding and text classification to agentic workflows and streamlined data pipelines. I'm passionate about AI, ML, NLP, and clean software engineering — and I love translating research into production systems that move the needle. When I'm not building models you'll find me hiking, playing pickleball, or making art.    </p>
 
           {/* Social Media Links */}
           <div className="social-links">
