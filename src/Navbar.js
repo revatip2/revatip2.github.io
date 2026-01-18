@@ -118,7 +118,7 @@ const Navbar = () => {
             </AnimatePresence>
           </button>
 
-          <a
+          {/* <a
             href="/Revati_Pawar_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const Navbar = () => {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M7 17L17 7M17 7H7M17 7V17"/>
             </svg>
-          </a>
+          </a> */}
 
           <button
             className={`mobile-menu-btn ${mobileMenuOpen ? 'open' : ''}`}

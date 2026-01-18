@@ -86,9 +86,8 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            Building end-to-end ML products in fintech that help teams make faster,
-            smarter decisions. From transformer-based document understanding to agentic
-            workflows — I turn research into production systems that actually ship.
+            I'm an engineer who loves building software and solving problems. I work across the stack, with a focus on AI and machine learning—creating systems that are smart, scalable, and solve real problems.
+Currently shaping the future of FinTech with AI!
           </motion.p>
 
           {/* Fun fact / Personality */}
@@ -194,11 +193,11 @@ const About = () => {
           <div className="floating-elements">
             <div className="float-card float-1">
               <span className="float-icon">🤖</span>
-              <span className="float-text">ML/AI</span>
+              <span className="float-text">AI/ML</span>
             </div>
             <div className="float-card float-2">
               <span className="float-icon">📊</span>
-              <span className="float-text">Data Science</span>
+              <span className="float-text">Software Engineering</span>
             </div>
             <div className="float-card float-3">
               <span className="float-icon">🚀</span>
