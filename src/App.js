@@ -1,31 +1,31 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './Navbar';
 import About from './About';
+import Skills from './Skills';
 import Projects from './Projects';
-import Education from './Education';
-import Footer from './Footer'; 
-import MainContent from './MainContent';
-
+import Experience from './Experience';
 import Contact from './Contact';
+import Footer from './Footer';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<About />} />
-        {/* No need for /projects route anymore */}
-        <Route path="/education" element={<Education />} />
-        {/* <Route path="/experiences" element={<Experiences />} /> */}
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      {/* Projects will be shown directly on the main page */}
-      <Projects />
-      <MainContent />
-      <Contact/>
-      <Footer />
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="app">
+          <Navbar />
+          <main>
+            <About />
+            <Experience />
+            <Skills />
+            <Projects />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

@@ -1,29 +1,66 @@
 .contact-section {
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    color: #030a54;
-    border-left: 85px solid #ffffff;
-    border-right: 85px solid #ffffff;
-    margin-top: 0px;
-    position: relative;
+  padding: 8rem 2rem;
+  background: var(--bg-primary);
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 2rem;
+}
+
+.contact-email {
+  display: inline-block;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--accent-primary);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.contact-email:hover {
+  border-bottom-color: var(--accent-primary);
+}
+
+.contact-links {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-links a {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-links a:hover {
+  color: var(--accent-primary);
+}
+
+.contact-links .divider {
+  color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .contact-section {
+    padding: 5rem 1rem;
   }
-  
-  .contact-description {
-    font-size: 1.1rem;
-    color: #003f5c;
-    margin-bottom: 0rem;
-  }
-  
-  .contact-email {
-    font-size: 1.1rem;
-    color: #003f5c;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .contact-email:hover {
-   
-    color: #f4b400;
-    text-decoration: underline;
-  }
-  
+}
